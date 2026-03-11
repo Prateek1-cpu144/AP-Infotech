@@ -37,11 +37,12 @@ export default function Home() {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
+              className="text-left"
             >
               <span className="inline-block px-4 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-sm font-semibold mb-6">
                 Next-Gen IT Solutions
@@ -52,7 +53,7 @@ export default function Home() {
               <p className="text-xl text-zinc-600 mb-10 leading-relaxed">
                 We bridge the gap between complex technology and business goals. Delivering scalable, secure, and innovative IT services for modern enterprises.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-start gap-4">
                 <Link
                   to="/contact"
                   className="w-full sm:w-auto bg-indigo-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-indigo-700 transition-all flex items-center justify-center group"
@@ -66,6 +67,32 @@ export default function Home() {
                 >
                   View Services
                 </Link>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative hidden lg:block"
+            >
+              <div className="absolute inset-0 bg-indigo-600/10 rounded-[3rem] blur-3xl -z-10" />
+              <img
+                src="https://picsum.photos/seed/tech-abstract/800/800"
+                alt="Technology Abstract"
+                className="rounded-[3rem] shadow-2xl border border-white/20"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl border border-zinc-100">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-emerald-50 p-3 rounded-xl">
+                    <Zap className="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-zinc-900">99.9% Uptime</div>
+                    <div className="text-xs text-zinc-500">Guaranteed reliability</div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>

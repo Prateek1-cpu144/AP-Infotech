@@ -53,6 +53,15 @@ export default function Contact() {
                     <p className="text-zinc-600">Silicon Valley, CA 94025</p>
                   </div>
                 </div>
+
+                <div className="pt-8">
+                  <img
+                    src="https://picsum.photos/seed/tech-support/600/400"
+                    alt="Tech Support"
+                    className="rounded-3xl shadow-lg w-full object-cover aspect-video"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
               </div>
             </motion.div>
 
